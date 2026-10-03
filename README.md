@@ -1,16 +1,158 @@
-# PDLF — Problem-Driven Lifecycle Framework
+<p align="center">
+  <img src="assets/presentation/PDLF-One-Pager.png" alt="PDLF One-Pager" width="680">
+</p>
 
-> **优秀工程师不是只会解决问题，而是会控制问题空间。**
->
+<h1 align="center">PDLF — Problem-Driven Lifecycle Framework</h1>
+
+<p align="center">
+  <b>问题驱动生命周期框架</b><br>
+  <i>优秀工程师不是只会解决问题，而是会控制问题空间。</i>
+</p>
+
+<p align="center">
+  <a href="#快速开始">快速开始</a> ·
+  <a href="#一个原则">一个原则</a> ·
+  <a href="#两颗树">两颗树</a> ·
+  <a href="#三个方法">三个方法</a> ·
+  <a href="#四个效果">四个效果</a> ·
+  <a href="#7阶段循环">7 阶段循环</a> ·
+  <a href="#agent使用">Agent 使用</a>
+</p>
+
+---
+
+## 一句话记住
+
 > **Attention Follows the Problem.**
+>
+> 注意力跟着问题走，不是跟着 Task 走。
+
+如果你经常遇到这些情况，这个框架就是为你写的：
+
+- [ ] 花了 3 小时修 Bug，最后发现修错了地方
+- [ ] 被紧急任务打断，忘了真正重要的事
+- [ ] 同一个问题反复出现，每次都从零开始排查
+- [ ] AI 给的方案看着对，执行完发现场景不匹配
+- [ ] 解决问题后不知道"下次怎么更早发现"
+
+**PDLF 不是教你更快解决问题，而是教你在问题的每个阶段做出正确决策。**
+
+决策对了，执行自然高效；决策错了，执行越快浪费越大。
+
+---
+
+## 一张图看懂
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                    一个原则                                 │
+│           Attention Follows the Problem                    │
+│                    注意力跟着问题走                          │
+├──────────────────────────┬─────────────────────────────────┤
+│        Problem Tree       │           Risk Tree             │
+│        问题发生了          │          问题还没发生            │
+│  "真正的问题是什么？"       │    "还可能在哪里失败？"           │
+│        效率提升           │        成本降低 + 预防            │
+├──────────────────────────┴─────────────────────────────────┤
+│                    三个方法                                 │
+│   5Why(构建问题) · 问题转化(降低难度) · FMEA(构建风险)        │
+├────────────────────────────────────────────────────────────┤
+│                    四个效果                                 │
+│   更短时间 + 更低成本 + 可视化 + 高效                         │
+└────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 快速开始
+
+### 5 分钟上手
+
+**第 1 步：创建问题目录**
+
+```bash
+mkdir my-problem && cd my-problem
+touch problem.md
+```
+
+**第 2 步：复制模板**
+
+```markdown
+# Problem: [一句话描述问题]
+
+> **问题 ID**: PDLF-YYYYMMDD-001
+> **优先级**: P{0-3}
+> **复杂度**: {1-10}/10
+
+## Discover
+- 现象: [可观测的事实]
+- 时间: [YYYY-MM-DD HH:MM]
+- 来源: [监控/用户反馈/测试]
+
+## Triage
+| 维度 | 评估 | 分数 |
+| Impact | [高/中/低] | [1-10] |
+| Urgency | [高/中/低] | [1-10] |
+| Scope | [广/中/窄] | [1-10] |
+| Uncertainty | [高/中/低] | [1-10] |
+决策: [立即处理/计划处理/接受风险]
+
+## Diagnose
+1. Why [现象]? → [原因]
+2. Why [原因]? → [原因]
+3. Why [原因]? → [原因]
+**根因**: [一句话]
+
+## Transform
+- 原始: [问题描述]
+- 尝试1: [方案] → [评估]
+- 尝试2: [方案] → [评估]
+- 选择: [方案]
+- 复杂度: {X}/10
+
+## Solve
+- 任务: [具体行动]
+- 验收: [可验证的标准]
+- 状态: [待开始/进行中/已完成]
+
+## Verify
+- [ ] 原始症状消失
+- [ ] 回归测试通过
+- [ ] 边界测试通过
+- [ ] 无新风险引入
+
+## Learn
+- 教训: [一句话]
+- 预防: [具体措施]
+- 风险模式: [是否录入 risk.md]
+```
+
+**第 3 步：按 7 阶段填写，每完成一个打勾**
+
+- [ ] Discover — 记录现象
+- [ ] Triage — 判断是否值得处理
+- [ ] Diagnose — 5Why 找到根因
+- [ ] Transform — 选择最优方案
+- [ ] Solve — 执行（交给 AI）
+- [ ] Verify — 验证 + 攻击解空间
+- [ ] Learn — 沉淀，下次更早发现
 
 ---
 
 ## 一个原则
 
-**注意力跟着问题走。**
+**Attention Follows the Problem.**
 
-不是 Every Task。人的注意力不应该平均分配给每一个任务，而应该跟随问题、风险和关键判断节点移动。
+人的注意力不应该平均分配给每一个任务，而应该跟随问题、风险和关键判断节点移动。
+
+```
+传统做法：每个 Task 都投入注意力
+PDLF 做法：只在关键决策点投入注意力
+
+  Discover ──→ Triage ──→ Diagnose ──→ Transform ──→ Solve ──→ Verify ──→ Learn
+     ↑                                                                            ↓
+     └──────────────── 循环扩大"提前发现"能力 ─────────────────────────────────────┘
+```
 
 [详细 → `100-principles/110-attention-follows-problem.md`](100-principles/110-attention-follows-problem.md)
 
@@ -18,19 +160,21 @@
 
 ## 两颗树
 
-| | 问题发生了 | 问题还没发生 |
-|---|-----------|------------|
-| **树** | **Problem Tree** | **Risk Tree** |
+| | **Problem Tree** | **Risk Tree** |
+|---|---|---|
+| **时机** | 问题发生了 | 问题还没发生 |
 | **核心** | 找到真正的因果节点 | 主动寻找可能失败的路径 |
-| **目的** | 提高解决问题的效率 | 避免问题发生的可能 |
 | **方法** | 5Why、鱼骨图、故障树 | FMEA、边界测试、对抗思维 |
+| **目的** | 提高解决问题的**效率** | 避免问题发生的**可能** |
 
 ```
 Problem Tree              Risk Tree
-"真正的问题是什么？"      "还可能在哪里失败？"
+"真正的问题是？"           "还会在哪里失败？"
       ↓                         ↓
   效率提升                 成本降低 + 预防
 ```
+
+**关键规则**：Risk Tree 不是末端归档，而是**贯穿全程**。每个阶段都问："什么可能让这一步失败？"
 
 [详细 → `200-structure/230-one-principle-two-trees.md`](200-structure/230-one-principle-two-trees.md)
 
@@ -38,27 +182,33 @@ Problem Tree              Risk Tree
 
 ## 三个方法
 
-### ① 5Why — 构建问题，找到真正的因果节点
+### ① 5Why — 构建问题
 
-> **问题发生了：层层追问，直到找到可以永久解决的因果节点。**
+> 不是问 5 次，而是问到**可以行动为止**。
 
-不是问 5 次，而是问到**可以行动为止**。
+```
+表象
+  ↓
+现象
+  ↓
+直接原因
+  ↓
+结构原因
+  ↓
+根因（因果节点）← 找到它就可以永久解决
+```
 
 [详细 → `300-methods/320-fmea-guide.md`](300-methods/320-fmea-guide.md)
 
-### ② 问题转化 — 把难题变成简单题
+### ② 问题转化 — 降低难度
 
-> **问题很难：改变表达方式、边界或约束，把它变成更适合求解的问题。**
-
-8 种转化模式：约束松弛、降维、类比映射、固定常数、最坏界、模拟替代、逆问题、Oracle 归约。
+> 把难题变成简单题。8 种转化模式：约束松弛、降维、类比映射、固定常数、最坏界、模拟替代、逆问题、Oracle 归约。
 
 [详细 → `300-methods/310-transformation-patterns.md`](300-methods/310-transformation-patterns.md)
 
-### ③ FMEA — 构建风险，主动寻找失败路径
+### ③ FMEA — 构建风险
 
-> **问题还没发生：在失败发生之前，构建一个潜在问题树。**
-
-Severity × Probability × Unknown = RPN。高 RPN 优先处理。
+> Severity × Probability × Unknown = RPN。在失败发生之前，构建潜在问题树。
 
 [详细 → `300-methods/320-fmea-guide.md`](300-methods/320-fmea-guide.md)
 
@@ -73,35 +223,31 @@ Severity × Probability × Unknown = RPN。高 RPN 优先处理。
 | **可视化** | 问题构建解决过程存档留痕 | Markdown 文件系统 |
 | **高效** | 发现并规避可能再次遇到的问题 | Risk Tree + FMEA |
 
-```
-更短时间  +  更低成本  +  可视化  +  高效
-   ↑            ↑           ↑          ↑
-Problem     Transform    文件系统    Risk
-  Tree       问题转化    即树结构    Tree
-```
-
 ---
 
-## 问题生命周期（7 阶段循环）
+## 7 阶段循环
 
 ```
 现实 ──→ ① DISCOVER ──→ ② TRIAGE ──→ ③ DIAGNOSE ──→ ④ TRANSFORM
                                               ↑                      │
                                               │                      ↓
-知识库 ←── ⑦ LEARN ←── ⑥ VERIFY/CHALLENGE ←── ⑤ SOLVE ←────────────┘
+知识库 ←── ⑦ LEARN ←── ⑥ VERIFY ─────────────┘                      ⑤ SOLVE
 ```
 
 | 阶段 | 核心问题 | 注意力 | 关键动作 |
 |------|---------|--------|---------|
-| **① Discover** | 哪里不对？ | 感知 | 观察现象，生成候选问题 |
-| **② Triage** | 值得解决吗？ | 判断 | 初筛：Impact × Urgency × Scope × Uncertainty |
+| **① Discover** | 哪里不对？ | 感知 | 观察现象 |
+| **② Triage** | 值得解决吗？ | 判断 | 初筛评估 |
 | **③ Diagnose** | 真正的问题是什么？ | **最高** | 5Why → Problem Tree |
-| **④ Transform** | 还能怎么问？ | 高 | 8 种转化 → 可解问题 |
-| **⑤ Solve** | 怎么实现？ | 低 | 交给 AI / 工具执行 |
-| **⑥ Verify** | 真的解决了吗？ | 中高 | 验证 + 攻击解空间 |
-| **⑦ Learn** | 下次如何更早发现？ | 中 | 沉淀 Risk Tree → 回到 Discover |
+| **④ Transform** | 还能怎么问？ | 高 | 转化 → 可解问题 |
+| **⑤ Solve** | 怎么实现？ | 低 | 交给 AI / 工具 |
+| **⑥ Verify** | 真的解决了吗？ | 中高 | 验证 + 攻击 |
+| **⑦ Learn** | 下次如何更早发现？ | 中 | 沉淀 → 回到 Discover |
 
-**关键规则**: Triage 两次 · Risk Tree 贯穿全程 · Human Gate（AI 停在 Transform）
+**关键规则**：
+- **Triage 两次** — 初筛 → Diagnose 后重新评估
+- **Risk Tree 贯穿全程** — 每个阶段都问"什么可能失败？"
+- **Human Gate** — AI 停在 Transform，人类审核后进入 Solve
 
 [详细 → `200-structure/210-lifecycle-7-stages.md`](200-structure/210-lifecycle-7-stages.md)
 
@@ -109,12 +255,12 @@ Problem     Transform    文件系统    Risk
 
 ## 问题状态层级
 
-| 层级 | 状态 | 示例 |
-|------|------|------|
-| **L0** 信号 | "CPU 90%" — 只是现象 | 观察 |
-| **L1** 候选 | "查询慢导致超时" — 需要确认 | 判断是否值得处理 |
-| **L2** 关键 | "索引失效导致全表扫描" — 可行动 | 定位 + 转化 + 解决 |
-| **L3** 风险 | "ORM 自动生成函数查询是系统性模式" — 影响未来 | 验证 + 预防 + 沉淀 |
+| 层级 | 状态 | 示例 | 核心动作 |
+|------|------|------|---------|
+| **L0** | 信号 | "CPU 90%" — 只是现象 | 观察 |
+| **L1** | 候选 | "查询慢导致超时" | 判断是否值得处理 |
+| **L2** | 关键 | "索引失效导致全表扫描" | 定位 + 转化 + 解决 |
+| **L3** | 风险 | "ORM 自动生成函数查询是系统性模式" | 验证 + 预防 + 沉淀 |
 
 > **问题的重要性不是由"它现在看起来多严重"决定，而是由定位后的因果结构决定。**
 
@@ -125,37 +271,40 @@ Problem     Transform    文件系统    Risk
 ## 四层知识结构
 
 ```
-100-principles/     ← L1 · 原理层：核心原则、认知转向
-200-structure/      ← L2 · 结构层：7阶段循环、状态层级
-300-methods/        ← L3 · 方法层：5Why、FMEA、转化模式、检查清单
-400-examples/       ← L4 · 经验层：具体案例、完整归档
+100-principles/     ← L1 · 原理层：为什么
+200-structure/      ← L2 · 结构层：是什么
+300-methods/        ← L3 · 方法层：怎么做
+400-examples/       ← L4 · 经验层：实际案例
 ```
 
 **设计策略**：越顶层越图像化（传播），越底层越文档化（实践）。
 
 ---
 
-## 快速开始
+## Agent 使用
 
-**人类路径**：`100-principles/` → `200-structure/` → `300-methods/` → `400-examples/`
+```
+人类路径：100-principles/ → 200-structure/ → 300-methods/ → 400-examples/
+Agent 路径：读取问题 → 匹配阶段 → 调用工具 → 参考案例 → 输出结果
+```
 
-**Agent 路径**：读取问题 → 匹配 `200-structure/` 阶段 → 调用 `300-methods/` 工具 → 参考 `400-examples/` 对标
+[Agent 完整指南 → `AGENT.md`](AGENT.md)
 
 ---
 
 ## 示例
 
-| 示例 | 路径 | 说明 |
+| 示例 | 路径 | 场景 |
 |------|------|------|
-| 调试慢查询 | [`400-examples/410-debug-slow-api/`](400-examples/410-debug-slow-api/) | 完整 7 阶段，20 分钟定位 |
-| 考研规划 | [`400-examples/420-kaoyan-planning/`](400-examples/420-kaoyan-planning/) | 非技术场景，识别焦虑根因 |
+| 调试慢查询 | [`400-examples/410-debug-slow-api/`](400-examples/410-debug-slow-api/) | 技术问题，20 分钟定位 |
+| 考研规划 | [`400-examples/420-kaoyan-planning/`](400-examples/420-kaoyan-planning/) | 非技术，识别焦虑根因 |
 | 风险预防 | [`400-examples/430-query-pattern-review/`](400-examples/430-query-pattern-review/) | 独立风险分析，RPN=192 |
 
 ---
 
 ## 三条铁律
 
-1. **Community First** — 解决问题先搜社区
+1. **Community First** — 解决问题先搜社区，借别人的认知校准自己的判断
 2. **Learn Everything** — 完整记录 diagnose → solve → prevent，沉淀为知识
 3. **Human Gate** — AI 停在 Transform，人类审核后才进入 Solve
 
