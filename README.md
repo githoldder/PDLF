@@ -54,9 +54,110 @@
 │   5Why(构建问题) · 问题转化(降低难度) · FMEA(构建风险)        │
 ├────────────────────────────────────────────────────────────┤
 │                    四个效果                                 │
-│   更短时间 + 更低成本 + 可视化 + 高效                         │
+│   更短时间 + 更低成本 + 可视化 + 可复用                        │
 └────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 你属于哪类用户？
+
+<details>
+<summary><b>工程师 / 开发者</b> — 修 Bug、查故障、性能优化</summary>
+
+**你的痛点**：
+- 花了 3 小时修 Bug，最后发现修错了地方
+- 同一个问题反复出现，每次都从零开始排查
+- AI 给的方案看着对，执行完发现场景不匹配
+
+**快速入口**：
+```bash
+# 一行命令创建技术问题
+pdlf new "API响应变慢" --scene tech
+```
+
+**推荐阅读**：
+- [检查清单: Triage](300-methods/checklist-templates/351-triage-checklist.md)
+- [检查清单: Diagnose](300-methods/checklist-templates/353-diagnose-checklist.md)
+- [示例: 调试慢查询](400-examples/410-debug-slow-api/)
+
+</details>
+
+<details>
+<summary><b>项目经理 / Team Lead</b> — 项目风险评估、进度管理</summary>
+
+**你的痛点**：
+- 项目风险总是事后才发现
+- 团队成员重复踩同样的坑
+- 无法量化项目中的不确定性
+
+**快速入口**：
+```bash
+pdlf new "Q4项目风险评估" --scene project
+```
+
+**推荐阅读**：
+- [FMEA 指南](300-methods/320-fmea-guide.md)
+- [检查清单: Verify](300-methods/checklist-templates/352-verify-checklist.md)
+
+</details>
+
+<details>
+<summary><b>学生 / 自学者</b> — 考研、技能提升、焦虑管理</summary>
+
+**你的痛点**：
+- 带着焦虑学习，效率越来越低
+- 被别人的进度绑架，没有自己的节奏
+- 学了很多，但不知道怎么验证效果
+
+**快速入口**：
+```bash
+pdlf new "考研复习进度滞后" --scene learning
+```
+
+**推荐阅读**：
+- [示例: 考研规划](400-examples/420-kaoyan-planning/)
+- [检查清单: Transform](300-methods/checklist-templates/354-transform-checklist.md)
+
+</details>
+
+<details>
+<summary><b>AI 使用者 / Prompt 工程师</b> — 控制 AI 输出质量</summary>
+
+**你的痛点**：
+- AI 越改越错，甚至声称完成了实际没有
+- Token 大量燃烧，却花大钱办小事
+- 明明想修改 A，AI 却理解成了 B
+
+**快速入口**：
+```bash
+pdlf new "AI输出不符合预期" --scene ai
+```
+
+**推荐阅读**：
+- [Human Gate 规则](200-structure/210-lifecycle-7-stages.md)
+- [检查清单: Transform](300-methods/checklist-templates/354-transform-checklist.md)
+
+</details>
+
+<details>
+<summary><b>产品经理 / UX</b> — 需求分析、用户体验问题</summary>
+
+**你的痛点**：
+- 用户反馈了很多问题，但不知道真正该解决哪个
+- 功能上线了，但不知道是否解决了用户痛点
+- 竞品分析做了很多，但无法转化为行动
+
+**快速入口**：
+```bash
+pdlf new "用户留存率下降分析" --scene product
+```
+
+**推荐阅读**：
+- [检查清单: Triage](300-methods/checklist-templates/351-triage-checklist.md)
+- [检查清单: Learn](300-methods/checklist-templates/355-learn-checklist.md)
+
+</details>
 
 ---
 
@@ -217,7 +318,7 @@ Problem Tree              Risk Tree
 | **更短时间** | 减少寻找真正问题的时间 | Problem Tree + 5Why |
 | **更低成本** | 降低解决问题的难度 | 问题转化 |
 | **可视化** | 问题构建解决过程存档留痕 | Markdown 文件系统 |
-| **高效** | 发现并规避可能再次遇到的问题 | Risk Tree + FMEA |
+| **可复用** | 每次问题解决后沉淀知识，下次提前发现 | Risk Tree + Learn |
 
 ---
 

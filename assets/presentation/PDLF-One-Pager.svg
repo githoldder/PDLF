@@ -50,7 +50,7 @@
   <text x="60" y="342" font-family="sans-serif" font-size="11" fill="#0C447C"><tspan font-weight="500">更短时间</tspan> — 减少寻找真正问题的时间</text>
   <text x="60" y="357" font-family="sans-serif" font-size="11" fill="#3B6D11"><tspan font-weight="500">更低成本</tspan> — 降低解决问题的难度</text>
   <text x="350" y="342" font-family="sans-serif" font-size="11" fill="#534AB7"><tspan font-weight="500">可视化</tspan> — 问题构建解决过程存档留痕</text>
-  <text x="350" y="357" font-family="sans-serif" font-size="11" fill="#854F0B"><tspan font-weight="500">高效</tspan> — 发现并规避可能再次遇到的问题</text>
+  <text x="350" y="357" font-family="sans-serif" font-size="11" fill="#854F0B"><tspan font-weight="500">可复用</tspan> — 沉淀知识，下次提前发现</text>
 
   <!-- 7 阶段循环 -->
   <rect x="40" y="386" width="600" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
