@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/presentation/PDLF-One-Pager.png" alt="PDLF One-Pager" width="680">
+  <img src="assets/presentation/PDLF-One-Pager.svg" alt="PDLF One-Pager" width="680">
 </p>
 
 <h1 align="center">PDLF — Problem-Driven Lifecycle Framework</h1>
@@ -29,11 +29,7 @@
 
 如果你经常遇到这些情况，这个框架就是为你写的：
 
-- [ ] 花了 3 小时修 Bug，最后发现修错了地方
-- [ ] 被紧急任务打断，忘了真正重要的事
-- [ ] 同一个问题反复出现，每次都从零开始排查
-- [ ] AI 给的方案看着对，执行完发现场景不匹配
-- [ ] 解决问题后不知道"下次怎么更早发现"
+> 多个项目轮着转，带着焦虑使用 AI 完成项目，却花费大量的时间在修 Bug 上；表面上效率很高，实则浪费了大量的注意力资源，Token 大量燃烧，却在花大钱办小事。明明想要修改的是这个问题，AI 却理解错了意思，越改越错，甚至声称改完了，实际上根本没有完成。同一个问题反复出现，每次都从零开始排查，解决后也不知道"下次怎么更早发现"。
 
 **PDLF 不是教你更快解决问题，而是教你在问题的每个阶段做出正确决策。**
 

@@ -1,0 +1,73 @@
+<svg viewBox="0 0 680 640" width="100%" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>PDLF One-Pager</title>
+  <desc>PDLF 核心框架：一个原则、两颗树、三个方法、四个效果、7阶段循环</desc>
+
+  <!-- 标题 -->
+  <rect x="40" y="10" width="600" height="40" rx="10" fill="#0C447C"/>
+  <text x="340" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">PDLF — Problem-Driven Lifecycle Framework</text>
+  <text x="340" y="44" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#B5D4F4">问题驱动生命周期框架 · 一张图讲清核心</text>
+
+  <!-- 一个原则 -->
+  <rect x="40" y="58" width="600" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+  <text x="340" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#0C447C">一个原则：Attention Follows the Problem · 注意力跟着问题走</text>
+  <text x="340" y="90" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#185FA5">不是 Every Task，只在关键决策点投入注意力</text>
+
+  <!-- 两颗树 -->
+  <rect x="40" y="108" width="295" height="95" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+  <text x="187" y="125" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#712B13">Problem Tree · 问题发生了</text>
+  <text x="55" y="142" font-family="sans-serif" font-size="11" fill="#444441">核心：找到真正的因果节点</text>
+  <text x="55" y="157" font-family="sans-serif" font-size="11" fill="#444441">方法：5Why / 鱼骨图 / 故障树</text>
+  <text x="55" y="172" font-family="sans-serif" font-size="11" fill="#444441">目的：提高解决问题的效率</text>
+  <text x="55" y="187" font-family="sans-serif" font-size="11" fill="#444441">→ 更短时间</text>
+
+  <rect x="345" y="108" width="295" height="95" rx="8" fill="#FBEAF0" stroke="#993556" stroke-width="0.5"/>
+  <text x="492" y="125" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#72243E">Risk Tree · 问题还没发生</text>
+  <text x="360" y="142" font-family="sans-serif" font-size="11" fill="#444441">核心：主动寻找可能失败的路径</text>
+  <text x="360" y="157" font-family="sans-serif" font-size="11" fill="#444441">方法：FMEA / 边界测试 / 对抗思维</text>
+  <text x="360" y="172" font-family="sans-serif" font-size="11" fill="#444441">目的：避免问题发生的可能</text>
+  <text x="360" y="187" font-family="sans-serif" font-size="11" fill="#444441">→ 高效（预防）</text>
+
+  <!-- 三个方法 -->
+  <rect x="40" y="213" width="600" height="85" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="340" y="230" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#444441">三个方法</text>
+
+  <rect x="55" y="240" width="180" height="48" rx="6" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+  <text x="145" y="257" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#27500A">5Why · 构建问题</text>
+  <text x="145" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#3B6D11">层层追问，找到因果节点</text>
+
+  <rect x="250" y="240" width="180" height="48" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+  <text x="340" y="257" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#3C3489">问题转化 · 降低难度</text>
+  <text x="340" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#534AB7">把难题变成简单题</text>
+
+  <rect x="445" y="240" width="180" height="48" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+  <text x="535" y="257" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="500" fill="#633806">FMEA · 构建风险</text>
+  <text x="535" y="272" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#854F0B">主动寻找失败路径</text>
+
+  <!-- 四个效果 -->
+  <rect x="40" y="306" width="600" height="70" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="340" y="322" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#444441">四个效果</text>
+
+  <text x="60" y="342" font-family="sans-serif" font-size="11" fill="#0C447C"><tspan font-weight="500">更短时间</tspan> — 减少寻找真正问题的时间</text>
+  <text x="60" y="357" font-family="sans-serif" font-size="11" fill="#3B6D11"><tspan font-weight="500">更低成本</tspan> — 降低解决问题的难度</text>
+  <text x="350" y="342" font-family="sans-serif" font-size="11" fill="#534AB7"><tspan font-weight="500">可视化</tspan> — 问题构建解决过程存档留痕</text>
+  <text x="350" y="357" font-family="sans-serif" font-size="11" fill="#854F0B"><tspan font-weight="500">高效</tspan> — 发现并规避可能再次遇到的问题</text>
+
+  <!-- 7 阶段循环 -->
+  <rect x="40" y="386" width="600" height="68" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+  <text x="340" y="404" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="500" fill="#085041">7 阶段循环</text>
+
+  <text x="55" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Discover</text>
+  <text x="140" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Triage</text>
+  <text x="215" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Diagnose</text>
+  <text x="300" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Transform</text>
+  <text x="395" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Solve</text>
+  <text x="465" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Verify</text>
+  <text x="540" y="425" font-family="sans-serif" font-size="10" fill="#0F6E56">Learn</text>
+
+  <text x="340" y="445" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5F5E5A">Triage 两次 · Risk Tree 贯穿全程 · Human Gate（AI 停在 Transform）</text>
+
+  <!-- Slogan -->
+  <rect x="40" y="464" width="600" height="48" rx="8" fill="#0C447C"/>
+  <text x="340" y="485" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="500" fill="#FFFFFF">优秀工程师不是只会解决问题，而是会控制问题空间。</text>
+  <text x="340" y="502" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#B5D4F4">AI 越强，执行越便宜；人类的价值越集中在定义问题、转化问题、预见风险。</text>
+</svg>
