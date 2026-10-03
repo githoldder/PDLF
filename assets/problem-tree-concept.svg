@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 28px; font-weight: bold; fill: #1a1a2e; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 16px; fill: #4a4a6a; }
+      .node-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; fill: #fff; }
+      .label-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 12px; fill: #555; }
+      .arrow { stroke: #888; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .loop-arrow { stroke: #e74c3c; stroke-width: 2.5; fill: none; stroke-dasharray: 6,4; }
+      .phase-box { rx: 10; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="700" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" class="title">注意力追随问题模型 (APT)</text>
+  <text x="450" y="72" text-anchor="middle" class="subtitle">5-Phase Loop · Problem Tree · Risk Tree</text>
+
+  <!-- Central Node -->
+  <ellipse cx="450" cy="130" rx="130" ry="40" fill="#1a1a2e"/>
+  <text x="450" y="137" text-anchor="middle" class="node-text" font-size="16">问题空间控制</text>
+
+  <!-- Phase 1: OBSERVE -->
+  <rect x="60" y="220" width="140" height="60" class="phase-box" fill="#3498db"/>
+  <text x="130" y="255" text-anchor="middle" class="node-text">1. OBSERVE</text>
+  <text x="130" y="300" text-anchor="middle" class="label-text">What — 发现已知问题</text>
+
+  <!-- Phase 2: LOCATE -->
+  <rect x="240" y="220" width="140" height="60" class="phase-box" fill="#9b59b6"/>
+  <text x="310" y="255" text-anchor="middle" class="node-text">2. LOCATE</text>
+  <text x="310" y="300" text-anchor="middle" class="label-text">Where — 标记关键节点</text>
+
+  <!-- Phase 3: ROOT -->
+  <rect x="420" y="220" width="140" height="60" class="phase-box" fill="#e74c3c"/>
+  <text x="490" y="255" text-anchor="middle" class="node-text">3. ROOT</text>
+  <text x="490" y="300" text-anchor="middle" class="label-text">Why — 5Why 找根因</text>
+
+  <!-- Phase 4: TRANSFORM -->
+  <rect x="600" y="220" width="140" height="60" class="phase-box" fill="#f39c12"/>
+  <text x="670" y="255" text-anchor="middle" class="node-text">4. TRANSFORM</text>
+  <text x="670" y="300" text-anchor="middle" class="label-text">How Else — 转化问题</text>
+
+  <!-- Phase 5: SOLVE -->
+  <rect x="380" y="340" width="140" height="60" class="phase-box" fill="#27ae60"/>
+  <text x="450" y="375" text-anchor="middle" class="node-text">5. SOLVE</text>
+  <text x="450" y="415" text-anchor="middle" class="label-text">Solution — 执行任务</text>
+
+  <!-- Arrows from center -->
+  <line x1="390" y1="160" x2="160" y2="210" class="arrow"/>
+  <line x1="410" y1="165" x2="310" y2="210" class="arrow"/>
+  <line x1="450" y1="170" x2="490" y2="210" class="arrow"/>
+  <line x1="490" y1="165" x2="630" y2="210" class="arrow"/>
+
+  <!-- Arrows between phases -->
+  <line x1="200" y1="250" x2="240" y2="250" class="arrow"/>
+  <line x1="380" y1="250" x2="420" y2="250" class="arrow"/>
+  <line x1="560" y1="250" x2="600" y2="250" class="arrow"/>
+
+  <!-- Arrow to SOLVE -->
+  <line x1="670" y1="280" x2="510" y2="340" class="arrow"/>
+
+  <!-- Loop back -->
+  <path d="M 380 370 Q 200 370 200 280" class="loop-arrow" marker-end="url(#arrowhead)"/>
+  <text x="240" y="355" class="label-text" fill="#e74c3c" font-weight="600">执行后回到 OBSERVE</text>
+
+  <!-- Human Gate -->
+  <rect x="580" y="320" width="160" height="35" rx="5" fill="#fff" stroke="#f39c12" stroke-width="2"/>
+  <text x="660" y="343" text-anchor="middle" class="label-text" fill="#f39c12" font-weight="600">⛔ Human Gate</text>
+  <text x="660" y="360" text-anchor="middle" class="label-text" font-size="10">AI 停在 TRANSFORM</text>
+
+  <!-- Two Trees -->
+  <rect x="50" y="460" width="380" height="180" rx="12" fill="#fff" stroke="#3498db" stroke-width="3"/>
+  <text x="240" y="495" text-anchor="middle" class="title" font-size="18" fill="#3498db">🌳 Problem Tree</text>
+  <text x="240" y="520" text-anchor="middle" class="subtitle">面向成功条件</text>
+  <text x="240" y="550" text-anchor="middle" class="label-text">Vertical: 5Why 纵向深挖根因</text>
+  <text x="240" y="575" text-anchor="middle" class="label-text">Horizontal: 转化 横向简化难度</text>
+  <text x="240" y="605" text-anchor="middle" class="label-text" font-weight="600">文件: *.apt.md</text>
+
+  <rect x="470" y="460" width="380" height="180" rx="12" fill="#fff" stroke="#e74c3c" stroke-width="3"/>
+  <text x="660" y="495" text-anchor="middle" class="title" font-size="18" fill="#e74c3c">🌲 Risk Tree</text>
+  <text x="660" y="520" text-anchor="middle" class="subtitle">面向失败条件</text>
+  <text x="660" y="550" text-anchor="middle" class="label-text">FMEA: 失效模式与影响分析</text>
+  <text x="660" y="575" text-anchor="middle" class="label-text">Mutation: 故意破坏系统测试</text>
+  <text x="660" y="605" text-anchor="middle" class="label-text" font-weight="600">文件: *.risk.md</text>
+
+  <!-- Bottom Principle -->
+  <rect x="150" y="665" width="600" height="32" rx="6" fill="#1a1a2e"/>
+  <text x="450" y="687" text-anchor="middle" class="node-text" font-size="13">Principle: Attention Follows the Problem · 注意力跟着问题走</text>
+</svg>
