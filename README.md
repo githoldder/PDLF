@@ -372,6 +372,7 @@ Problem Tree              Risk Tree
 200-structure/      ← L2 · 结构层：是什么
 300-methods/        ← L3 · 方法层：怎么做
 400-examples/       ← L4 · 经验层：实际案例
+presentation/       ← 交互式演示：SCQA 演讲文稿
 ```
 
 **设计策略**：越顶层越图像化（传播），越底层越文档化（实践）。
