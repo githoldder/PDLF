@@ -8,4 +8,7 @@
 - Overhauled presentation/styles.css with high-contrast color scheme, glassmorphism cards, and glow animations.
 - Overhauled presentation/index.html with 8 double-beat (abstract-concrete) SCQA narrative cycles and vertical slide drill-down.
 - Updated presentation/script.js with dynamic attention energy bar and low-energy warning animation.
+- Updated README.md directory tree-view to include presentation/.
+- Synchronized all commits to origin/main.
+
 
