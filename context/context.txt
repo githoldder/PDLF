@@ -1,0 +1,7 @@
+# PDLF Short-Term Context Memory
+
+## 2026-10-04
+- Added assets/cognitive-funnel.png (original user diagram).
+- Created assets/cognitive-funnel.svg (vector visualization for presentation & docs).
+- Created 300-methods/370-cognitive-funnel.md (Cognitive Resource Funnel documentation).
+- Updated 300-methods/checklist-templates/351-triage-checklist.md to reference the Funnel model.
