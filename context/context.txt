@@ -5,3 +5,7 @@
 - Created assets/cognitive-funnel.svg (vector visualization for presentation & docs).
 - Created 300-methods/370-cognitive-funnel.md (Cognitive Resource Funnel documentation).
 - Updated 300-methods/checklist-templates/351-triage-checklist.md to reference the Funnel model.
+- Overhauled presentation/styles.css with high-contrast color scheme, glassmorphism cards, and glow animations.
+- Overhauled presentation/index.html with 8 double-beat (abstract-concrete) SCQA narrative cycles and vertical slide drill-down.
+- Updated presentation/script.js with dynamic attention energy bar and low-energy warning animation.
+

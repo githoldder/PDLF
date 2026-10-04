@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDLF: 站在观众视角的认知重构演示</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- ================= 循环 1: 注意力危机 (SCQA: Situation & Complication) ================= -->
+        <section>
+          <!-- 1A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge red">SCQA · 核心冲突</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-red">最贵的 AI 失败，<br>是光速解决了错误的问题</h2>
+              <p class="subtitle">AI 让代码生成趋近免费，却让<strong>人类有限的注意力</strong>成为全链路唯一的死穴与最昂贵的资产。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 按向下键查看独立开发者真实惨状</p>
+          </section>
+
+          <!-- 1B: 具象案例与互动 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge amber">真实写照 · 单兵作战</span>
+            <h2>你的 100 点注意力，是如何被吸干的？</h2>
+            
+            <div class="attention-lab-widget">
+              <div class="budget-panel">
+                <div class="meter-gauge">
+                  <span style="font-size:0.55em; color:var(--text-dim); display:block;">剩余认知能量</span>
+                  <div class="meter-num" data-budget-value>100</div>
+                  <div class="meter-bar-outer">
+                    <div class="meter-bar-fill" data-budget-bar></div>
+                  </div>
+                </div>
+                <div class="spend-actions">
+                  <button class="btn-spend" data-spend="45" data-target-choice="chase">
+                    <span>盯着 AI 狂敲代码</span>
+                    <strong style="color:var(--accent-red);">-45</strong>
+                  </button>
+                  <button class="btn-spend" data-spend="35" data-target-choice="patch">
+                    <span>修衍生的 5 个新 Bug</span>
+                    <strong style="color:var(--accent-amber);">-35</strong>
+                  </button>
+                  <button class="btn-spend" data-spend="15" data-target-choice="think">
+                    <span>停下来定义真正问题</span>
+                    <strong style="color:var(--accent-cyan);">-15</strong>
+                  </button>
+                  <button class="btn-reset" data-reset-budget>↺ 重置测试</button>
+                </div>
+              </div>
+
+              <div class="feedback-cards">
+                <div class="fb-card active" data-choice="chase">
+                  <span class="card-tag red">现象 1: 盲目追随 Task</span>
+                  <p>Cursor / Copilot 跑了 20 轮，生成 800 行代码。看似忙得热火朝天，实际离最初的目标南辕北辙。</p>
+                </div>
+                <div class="fb-card" data-choice="patch">
+                  <span class="card-tag amber">现象 2: 衍生补丁地狱</span>
+                  <p>为了解决 A 引入了 B，为了解决 B 引入了 C。单兵开发者通宵达旦，最终在凌晨 4 点心态崩盘。</p>
+                </div>
+                <div class="fb-card" data-choice="think">
+                  <span class="card-tag cyan">破局点: 极度克制的锚定</span>
+                  <p>把手从键盘拿开 10 分钟，写清核心约束。这一步消耗最小，却拯救了后续 90% 的生命。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 2: 问题驱动公理 (SCQA: Question & Answer) ================= -->
+        <section>
+          <!-- 2A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge cyan">PDLF 公理 · 第一原则</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-cyan">Attention Follows the Problem</h2>
+              <p class="subtitle">人类注意力只追随<strong>“问题空间”</strong>，不追随<strong>“任务动作”</strong>。<br>大脑是 CPU 而非硬盘，必须把问题外化为 <code>problem.md</code> 才能终止无意识游走。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看 Prompt 质量的断层差距</p>
+          </section>
+
+          <!-- 2B: 具象案例对比 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge green">输入对比 · 认知杠杆</span>
+            <h2>给 AI 一个任务 vs 给 AI 一个结构化问题</h2>
+
+            <div class="compare-grid">
+              <div class="bento-card danger">
+                <span class="card-tag red">反模式：口令式任务 (Task-Driven)</span>
+                <p><strong>开发者输入：</strong></p>
+                <div class="code-box">"帮我把订单接口改快一点，现在超时很严重，多加几个索引试试"</div>
+                <p style="margin-top:0.8rem;"><strong>AI 反应：</strong>盲目建了 4 个联合索引，加了全局互斥锁，内存撑爆，根因依旧。</p>
+              </div>
+
+              <div class="bento-card success fragment">
+                <span class="card-tag green">PDLF：问题定义驱动 (Problem-Driven)</span>
+                <p><strong>加载 <code>problem.md</code>：</strong></p>
+                <div class="code-box">
+L0 现象: /orders P99 飙升至 3200ms<br>
+边界假设: 可能是按日期切分范围查询时走全表扫描<br>
+约束目标: 不改表结构，保持时区一致性，提供 EXPLAIN 验证
+                </div>
+                <p style="margin-top:0.8rem;"><strong>AI 反应：</strong>精准定位函数包裹索引问题，20 秒写出确定性改写与回滚方案。</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 3: 认知防火墙与注意力节约 (Triage 漏斗模型) ================= -->
+        <section>
+          <!-- 3A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge amber">Triage 哲学 · 认知减负</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-amber">“不解决”本身，<br>就是一种极高级的工程决策</h2>
+              <p class="subtitle">单兵作战必须建立<strong>认知防火墙</strong>：将 95% 的琐碎问题拦截在重型思考之外，只把 100% 的顶尖注意力留给 5% 的深水区。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 展开认知资源漏斗模型</p>
+          </section>
+
+          <!-- 3B: 具象案例与漏斗图 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge amber">方法实装 · 漏斗分流</span>
+            <h2>认知资源漏斗模型 (Cognitive Funnel)</h2>
+
+            <div class="funnel-container">
+              <div class="funnel-img-wrap">
+                <img src="../assets/cognitive-funnel.svg" alt="认知资源漏斗模型">
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:0.6rem;">
+                <div class="bento-card" style="padding:0.9rem;">
+                  <strong style="color:var(--accent-cyan); font-size:0.8em;">P4 (50%) 快速处理/直接忽略</strong>
+                  <p style="font-size:0.6em; margin:0.2rem 0 0 0;">UI 像素微调、非致命警告。零脑力消耗，不值得开会或分析。</p>
+                </div>
+                <div class="bento-card" style="padding:0.9rem;">
+                  <strong style="color:#38bdf8; font-size:0.8em;">P3 (30%) 文档化/录屏备忘</strong>
+                  <p style="font-size:0.6em; margin:0.2rem 0 0 0;">偶发性边缘 Case。录屏丢进待办，绝不打断当下主线心流。</p>
+                </div>
+                <div class="bento-card" style="padding:0.9rem;">
+                  <strong style="color:var(--accent-amber); font-size:0.8em;">P2 (15%) 脚本自动化/AI代理外包</strong>
+                  <p style="font-size:0.6em; margin:0.2rem 0 0 0;">重复繁琐数据清洗。写一段 Prompt 或脚本交由 Agent 跑完。</p>
+                </div>
+                <div class="bento-card danger" style="padding:0.9rem;">
+                  <strong style="color:var(--accent-red); font-size:0.8em;">P1 (5%) 深度诊断与方案博弈</strong>
+                  <p style="font-size:0.6em; margin:0.2rem 0 0 0;"><strong>人类真正的主战场</strong>：核心架构根因、死锁风险。启动完整 5Why。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 4: 根因穿透 (Diagnose) ================= -->
+        <section>
+          <!-- 4A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge cyan">Diagnose 命题 · 追问本质</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-cyan">表象是骗人的，<br>沿着因果链直击结构性断点</h2>
+              <p class="subtitle">头痛医头只会让系统越来越脆弱。Diagnose 的使命，是在表象（Symptom）与根因（Root Cause）之间建起牢不可破的因果树。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看经典慢查询的因果下钻</p>
+          </section>
+
+          <!-- 4B: 具象案例实录 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge cyan">经典案例 · 慢 API 并非慢 API</span>
+            <h2>从 L0 信号到 L2 因果树的 5 次穿透</h2>
+
+            <div class="bento-grid bento-3col" style="margin-top: 1rem;">
+              <div class="bento-card">
+                <span class="card-tag red">L0 观察信号</span>
+                <h3>P99 飙到 3200ms</h3>
+                <p>监控告警狂响，用户抱怨结账卡顿。直觉反应是“数据库扛不住了要扩容”。</p>
+              </div>
+
+              <div class="bento-card fragment">
+                <span class="card-tag amber">5-Why 因果下钻</span>
+                <h3>为什么慢？</h3>
+                <p>1. 查询耗时超 3s<br>
+                   2. 为什么？走了全表扫描<br>
+                   3. 为什么？索引未命中<br>
+                   4. 为什么？<code>DATE(created_at)</code> 包裹了字段</p>
+              </div>
+
+              <div class="bento-card fragment highlight">
+                <span class="card-tag cyan">L2 结构性真问题</span>
+                <h3>破坏 SARGable</h3>
+                <p>对索引列使用函数导致 B+Tree 索引失效。只需改写为范围查询，0 成本恢复 5ms 响应。</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 5: 问题转化之术 (Transform & Solve) ================= -->
+        <section>
+          <!-- 5A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge green">Transform · 降维打击</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-cyan">真正的高手，<br>是把不可解问题改写成确定性执行题</h2>
+              <p class="subtitle">AI 不是缺少解题智力，而是无法理解现实的模糊性。<br>Transform 是人类最大的杠杆：<strong>改写问题的约束与范围，直到它对 AI 变成一道选择题。</strong></p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看两种问题定义下的执行鸿沟</p>
+          </section>
+
+          <!-- 5B: 具象案例实测 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge green">工程实录 · 问题转化模式</span>
+            <h2>从“海量不确定”到“20秒确定性闭环”</h2>
+
+            <div class="compare-grid">
+              <div class="bento-card danger">
+                <span class="card-tag red">原始问题 (不可解/随机游走)</span>
+                <h3>“优化重构整套订单结算链路”</h3>
+                <p>范围无限大、风险无限高、AI 随意脑补重构代码，导致上线后出现灾难级死锁。</p>
+                <div class="code-box">// 成本：耗费 3 天，引入 4 个未知隐患</div>
+              </div>
+
+              <div class="bento-card success fragment">
+                <span class="card-tag green">转化后 (范围收敛 + 约束显式化)</span>
+                <h3>“将单日统计改为开闭区间范围扫描”</h3>
+                <p>将 <code>DATE(c) = '2026-10-04'</code> 转化为 <code>c &gt;= '2026-10-04 00:00:00' AND c &lt; '2026-10-05 00:00:00'</code>，保留原时区逻辑。</p>
+                <div class="code-box">// 结果：AI 20秒写完代码并生成 EXPLAIN 单元测试</div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 6: 验证与防翻车 (Verify: V-Model & FMEA) ================= -->
+        <section>
+          <!-- 6A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge red">Verify 哲学 · 主动攻击</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-red">单兵没有测试团队，<br>“代码跑通”只是最危险的假象</h2>
+              <p class="subtitle">AI 最擅长写出“语法完美但逻辑致命”的假代码。验证不是点点头确认，而是用 <strong>V-Model 对齐原始意图</strong>，用 <strong>FMEA 穷尽恶意攻击解空间</strong>。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看 FMEA 风险优先级计算</p>
+          </section>
+
+          <!-- 6B: 具象 FMEA 表格实操 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge red">实战防翻车 · FMEA 风险矩阵</span>
+            <h2>上线前问一句：“它会怎么弄死我？”</h2>
+
+            <table class="fmea-table">
+              <thead>
+                <tr>
+                  <th>潜在失效模式 (Failure Mode)</th>
+                  <th>严重度 S</th>
+                  <th>发生度 P</th>
+                  <th>未知度 U</th>
+                  <th>风险指数 RPN</th>
+                  <th>强制防御策略</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="fragment">
+                  <td>跨日边界时区错位（UTC vs 本地时区）</td>
+                  <td>7</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td><span class="rpn-pill rpn-high">210 (高危)</span></td>
+                  <td>编写跨时区单元测试，严格对齐基准时区</td>
+                </tr>
+                <tr class="fragment">
+                  <td>瞬时高并发冲垮数据库连接池</td>
+                  <td>9</td>
+                  <td>6</td>
+                  <td>4</td>
+                  <td><span class="rpn-pill rpn-high">216 (高危)</span></td>
+                  <td>上线前接入连接池排队与慢查询熔断</td>
+                </tr>
+                <tr class="fragment">
+                  <td>历史冷数据归档查询未建联合索引</td>
+                  <td>4</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td><span class="rpn-pill rpn-low">36 (接受)</span></td>
+                  <td>记录到 <code>risk.md</code> 持续监控，无需阻塞发版</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+
+        <!-- ================= 循环 7: 复利沉淀 (Learn) ================= -->
+        <section>
+          <!-- 7A: 抽象命题 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象命题</span>
+              <span class="beat-pill">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge violet">Learn 演化 · 免疫复利</span>
+            <div class="thesis-hero">
+              <h2 class="text-gradient-violet">不要写落灰的文档，<br>把故障直接铸造成“自动化免疫受体”</h2>
+              <p class="subtitle">单兵作战的终极优势是<strong>进化速度</strong>。每次痛苦的排查，都不该以一句“终于改完了”收场，而必须沉淀为系统永远不会再犯的自动化防线。</p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看单个 Incident 如何变成永久防御</p>
+          </section>
+
+          <!-- 7B: 具象沉淀与自动化规则 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象命题</span>
+              <span class="beat-pill active">Beat 2 · 具象论据</span>
+            </div>
+            <span class="slide-badge violet">知识内化 · 自动化防御</span>
+            <h2>从单次惨案到终身免疫的闭环</h2>
+
+            <div class="bento-grid bento-3col" style="margin-top: 1.2rem;">
+              <div class="bento-card">
+                <span class="card-tag red">第 1 步 · 一次惨痛踩坑</span>
+                <h4>发现 <code>DATE()</code> 陷阱</h4>
+                <p>生产环境遭遇全表扫描，P99 飙升。经历 5Why 定位与改写修复。</p>
+              </div>
+
+              <div class="bento-card fragment">
+                <span class="card-tag amber">第 2 步 · 提炼 Risk Pattern</span>
+                <h4>抽象出通用风险</h4>
+                <p>“任何在 WHERE 索引列上套用不可逆函数的 SQL，均属于高危反模式。”</p>
+              </div>
+
+              <div class="bento-card fragment highlight">
+                <span class="card-tag green">第 3 步 · 固化为免疫规则</span>
+                <h4>写入 Linter / AI Rules</h4>
+                <p>写进 <code>.cursorrules</code> 或 CI Linter。下次开发时，AI 与编译器会在敲下键盘的第 1 秒当场拦截！</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- ================= 循环 8: 哲学升华与行动收官 ================= -->
+        <section>
+          <!-- 8A: 抽象升华 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill active">Beat 1 · 抽象升华</span>
+              <span class="beat-pill">Beat 2 · 今晚行动</span>
+            </div>
+            <span class="slide-badge cyan">PDLF 哲学 · 终极心法</span>
+            
+            <div class="philosophy-banner">
+              <h3 class="text-gradient-cyan">
+                “正常生活场景千变万化，方法灵活多变，<br>
+                流程框架往往只需要微调，<br>
+                原则则是铁打不动的。”
+              </h3>
+              <p style="color:var(--text-muted); font-size:0.7em; margin:0 auto; max-width:700px;">
+                不要把框架当成教条的枷锁。无论你是写代码、搞科研、还是做独立产品——<br>
+                <strong>守住注意力，锁死真问题，剩下的放心交给工具。</strong>
+              </p>
+            </div>
+            <p style="font-size: 0.55em; color: var(--text-dim); margin-top: 1rem;">↓ 查看你的下周最小行动</p>
+          </section>
+
+          <!-- 8B: 具象行动召集 -->
+          <section>
+            <div class="beat-nav">
+              <span class="beat-pill">Beat 1 · 抽象升华</span>
+              <span class="beat-pill active">Beat 2 · 今晚行动</span>
+            </div>
+            <span class="slide-badge green">立刻出发 · 最小微习惯</span>
+            <h2>今晚回去，从这一个动作开始</h2>
+
+            <div class="thesis-hero" style="padding: 1.8rem; margin-top: 1rem;">
+              <h3 style="font-size: 1.3em; margin-bottom: 0.6rem;">不要一上来就打开 Copilot 狂敲 Tab</h3>
+              <p class="subtitle" style="margin-bottom: 0.8rem;">在项目根目录敲下这行命令：</p>
+              
+              <div class="action-cta-box">
+                $ touch problem.md
+              </div>
+
+              <div class="bento-grid bento-3col" style="margin-top: 1.2rem;">
+                <div class="bento-card" style="padding: 0.8rem;">
+                  <strong style="color:var(--accent-cyan); font-size: 0.72em;">1. 写下观察到的现象</strong>
+                  <p style="font-size: 0.55em; margin: 0.2rem 0 0 0;">事实与数字，不写主观猜测</p>
+                </div>
+                <div class="bento-card" style="padding: 0.8rem;">
+                  <strong style="color:var(--accent-amber); font-size: 0.72em;">2. 漏斗初筛分流</strong>
+                  <p style="font-size: 0.55em; margin: 0.2rem 0 0 0;">95% 的琐碎问题果断忽略或录屏</p>
+                </div>
+                <div class="bento-card" style="padding: 0.8rem;">
+                  <strong style="color:var(--accent-green); font-size: 0.72em;">3. 5% 的深水区放行 AI</strong>
+                  <p style="font-size: 0.55em; margin: 0.2rem 0 0 0;">把约束给清，让 AI 成为精准利刃</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        controls: true,
+        progress: true,
+        center: true,
+        transition: "slide",
+        backgroundTransition: "fade",
+        plugins: [RevealNotes, RevealHighlight]
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
